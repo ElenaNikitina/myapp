@@ -1,0 +1,18 @@
+<table class="table table-inverse" ng-controller="GtopenCtrl">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="pilot in pilots">
+      <th scope="row">{{pilot.pilotNumber}}</th>
+      <td >{{pilot.name}}</td>
+      <td>{{pilot.lastName}}</td>
+      <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>
