@@ -1,6 +1,6 @@
 'use strict';
 
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngSQLite']);
 
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvide, $locationProvider){
 	$routeProvide

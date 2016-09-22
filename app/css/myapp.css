@@ -1,4 +1,19 @@
 /* CSS declarations go here */
 body{
-	background-color: #f99;
+    background-image: url(http://images.hgmsites.net/med/1971-porsche-917-long-tail_100196913_m.jpg);
+    background-size: cover;
+}
+
+#page-wrapper{
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    left: 0;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+	background-color: #fff;
+    opacity: 0.5;
+    z-index: 999;
 }

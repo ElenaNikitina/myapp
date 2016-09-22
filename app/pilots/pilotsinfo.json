@@ -1,11 +1,19 @@
 [
 		{
-		"pilotNumber": "1",
+		"pilotPlace": "1",
 		"name": "Ivan",
-		"lastName": "Ivanov"
+		"lastName": "Ivanov",
+		"car": "Civic",
+		"time": "1.28.8",
+		"penalization": "0",
+		"points": "20"
 		},{
-		"pilotNumber": "2",
+		"pilotPlace": "2",
 		"name": "Anton",
-		"lastName": "Antonov"
+		"car": "Honda",
+		"lastName": "Antonov",
+		"time": "1.28.9",
+		"penalization": "0",
+		"points": "18"
 		}
 	]	
