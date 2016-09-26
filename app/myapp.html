@@ -11,10 +11,12 @@
 
 <body ng-controller="RaceCtrl">
   <div id="page-wrapper">
-    <div id="sidebar-wrapper">
+    <div id="sidebar-wrapper" class="main-sidebar">
       <ul class="sidebar">
-        <li class="sidebar-main">
+        <li class="cars-class-img">
 <!--          <img src="http://images.hgmsites.net/med/1971-porsche-917-long-tail_100196913_m.jpg"></img>-->
+          
+          <img ng-src="{{ params.path }}" class="img-rounded"></img>
         </li>
       </ul>
     </div>

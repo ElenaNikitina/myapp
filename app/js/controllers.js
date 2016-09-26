@@ -25,20 +25,27 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvide, $lo
         });
 }]);
 
-myApp.controller('RaceCtrl',['$scope', '$http', '$location', function($scope, $http, $location){
+myApp.controller('RaceCtrl',['$scope', '$rootScope', '$http', '$location', 
+function($scope, $rootScope, $http, $location){
 	console.log('$location.url() - ', $location.url());
+	$rootScope.params = {};
+		
 }]);
 
-myApp.controller('GtopenCtrl',['$scope', '$http', '$location', function($scope, $http, $location){
+myApp.controller('GtopenCtrl',['$scope', '$rootScope', '$http', '$location', 
+function($scope, $rootScope, $http, $location){
 	$http.get('pilots/pilotsinfo.json').success(function(data){
 		$scope.pilots = data;
+		$rootScope.params.path = 'http://www.chayka-ring.com/upload/file/Koltco_2016/6_dmitriy_zhayvoronok_andrey_evtushenko.jpg';
 	});
 }]);
 
-myApp.controller('Y1600Ctrl',['$scope', '$http', '$location', function($scope, $http, $location){
-	
+myApp.controller('Y1600Ctrl',['$scope', '$rootScope', '$http', '$location',
+ function($scope, $rootScope, $http, $location){
+	$rootScope.params.path = 'http://www.chayka-ring.com/upload/file/Koltco_2016/10_valeriy_shevelev.jpg';
 }]);
 
-myApp.controller('GccupCtrl',['$scope', '$http', '$location', function($scope, $http, $location){
-	
+myApp.controller('GccupCtrl',['$scope', '$rootScope', '$http', '$location',
+ function($scope, $rootScope, $http, $location){
+	$rootScope.params.path = 'http://www.chayka-ring.com/upload/file/Koltco_2016/6244.jpg';
 }]);
