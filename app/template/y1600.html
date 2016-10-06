@@ -1,1 +1,39 @@
-<h1>Y - 1600</h1>
+<div class="page-content" ng-controller="Y1600Ctrl">
+	<h1>Y - 1600</h1>
+	<form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="firstname">First Name</label>
+	    <input type="email" class="form-control" id="firstname" placeholder="First Name">
+	  </div>
+	  <div class="form-group">
+	    <label class="sr-only" for="lastname">Last Name</label>
+	    <input type="password" class="form-control" id="lastname" placeholder="Last Name">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Save</button>
+	</form>
+	
+	<table class="table table-inverse" >
+	  <thead>
+	    <tr>
+	      <th>Place</th>
+	      <th>First Name</th>
+	      <th>Last Name</th>
+	      <th>Car</th>
+	      <th>Time</th>
+	      <th>Penalization</th>
+	      <th>Points</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="pilot in pilots">
+	      <th scope="row">{{pilot.pilotPlace}}</th>
+	      <td >{{pilot.name}}</td>
+	      <td>{{pilot.lastName}}</td>
+	      <td>{{pilot.car}}</td>
+	      <td>{{pilot.time}}</td>
+	      <td>{{pilot.penalization}}</td>
+	      <td>{{pilot.points}}</td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
