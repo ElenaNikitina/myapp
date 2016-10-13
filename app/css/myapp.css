@@ -2,6 +2,7 @@
 body{
     background-image: url(http://images.hgmsites.net/med/1971-porsche-917-long-tail_100196913_m.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #page-wrapper{

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/myapp.css"></link>
+  <link rel="stylesheet" href="css/normalize.css"></link>
+  <link rel="stylesheet" href="css/myapp.css"></link>
 </head>
 
 <body ng-controller="RaceCtrl">
@@ -15,7 +16,18 @@
       <ul class="sidebar">
         <li class="cars-class-img">
 <!--          <img src="http://images.hgmsites.net/med/1971-porsche-917-long-tail_100196913_m.jpg"></img>-->
-          
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Card title</h4>
+              <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+            </div>
+            <img src="http://images.hgmsites.net/med/1971-porsche-917-long-tail_100196913_m.jpg" alt="Card image">
+            <div class="card-block">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
           <img ng-src="{{ params.path }}" class="img-rounded"></img>
         </li>
       </ul>
@@ -34,22 +46,12 @@
               <a class="nav-link" href="#/gccup">Grand Classic Cup</a>
             </li>
           </ul>
-          <form class="form-inline pull-xs-right">
-            <input class="form-control" type="text" placeholder="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </nav>
           <h1>Welcome!</h1>
         {{3-5}}
-        
           <ng-view></ng-view>
     </div>
   </div>
-<!--  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>-->
-    
-<!--  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>-->
   <!-- Firebase -->
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
   <script>
@@ -61,17 +63,17 @@
       storageBucket: "myapp-73570.appspot.com",
       messagingSenderId: "182292378404"
     };
-
   </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
-<!--	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+  <!--	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
 
 <!-- <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>-->
   <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

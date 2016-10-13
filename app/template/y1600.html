@@ -1,17 +1,13 @@
 <div class="page-content" ng-controller="Y1600Ctrl">
 	<h1>Y - 1600</h1>
-	<form class="form-inline">
-	  <div class="form-group">
-	    <label class="sr-only" for="firstname">First Name</label>
-	    <input type="email" class="form-control" id="firstname" placeholder="First Name">
-	  </div>
-	  <div class="form-group">
-	    <label class="sr-only" for="lastname">Last Name</label>
-	    <input type="password" class="form-control" id="lastname" placeholder="Last Name">
-	  </div>
-	  <button type="submit" class="btn btn-primary">Save</button>
-	</form>
-	
+<form>
+    <input name="name" class="form-control" type="name" placeholder="Title" id="titleInput" />
+    <br/>
+    <textarea id="postInput" name="content" data-provide="markdown" rows="10"></textarea>
+    <hr/>
+    <button type="submit" class="btn" onclick="submitPost()">Submit</button>
+</form>
+<div id="PostsDiv"></div>
 	<table class="table table-inverse" >
 	  <thead>
 	    <tr>
