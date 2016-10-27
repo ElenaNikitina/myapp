@@ -1,11 +1,36 @@
 <div class="page-content" ng-controller="Y1600Ctrl">
 	<h1>Y - 1600</h1>
-<form>
-    <input name="name" class="form-control" type="name" placeholder="Title" id="titleInput" />
-    <br/>
-    <textarea id="postInput" name="content" data-provide="markdown" rows="10"></textarea>
-    <hr/>
-    <button type="submit" class="btn" onclick="submitPost()">Submit</button>
+<form ng-submit="addRecord()" class="form-inline">
+	  <div class="form-group">
+			<label class="sr-only" for=""></label>
+			<input ng-model="newRecord.pilotPlace" class="form-control" type="text" id="" placeholder="Place">
+  	</div>
+		 <div class="form-group">
+			<label class="sr-only" for=""></label>
+			<input ng-model="newRecord.name" class="form-control" type="text" id="" placeholder="First Name">
+  	</div>
+		 <div class="form-group">
+			<label class="sr-only" for=""></label>
+			<input ng-model="newRecord.lastName" class="form-control" type="text" id="" placeholder="Last Name">
+  	</div>
+		 <div class="form-group">
+			<label class="sr-only" for=""></label>
+			<input ng-model="newRecord.car" class="form-control" type="text" id="" placeholder="Car">
+  	</div>
+		 <div class="form-group">
+			<label class="sr-only" for=""></label>
+			<input ng-model="newRecord.time" class="form-control" type="text" id="" placeholder="Time">
+  	</div>
+		 <div class="form-group">
+			<label class="sr-only" for=""></label>
+			<input ng-model="newRecord.penalization" class="form-control" type="text" id="" placeholder="Penalization">
+  	</div>
+		 <div class="form-group">
+			<label class="sr-only" for=""></label>
+			<input ng-model="newRecord.points" class="form-control" type="text" id="" placeholder="Points">
+  	</div>
+    <!--<button type="submit" class="btn" onclick="submitPost()">Submit</button>-->
+		  <button type="submit" ng-click="addRecord()" class="btn">Submit</button>
 </form>
 <div id="PostsDiv"></div>
 	<table class="table table-inverse" >
@@ -21,7 +46,7 @@
 	    </tr>
 	  </thead>
 	  <tbody>
-	    <tr ng-repeat="pilot in pilots">
+	    <tr ng-repeat="pilot in data.pilots">
 	      <th scope="row">{{pilot.pilotPlace}}</th>
 	      <td >{{pilot.name}}</td>
 	      <td>{{pilot.lastName}}</td>

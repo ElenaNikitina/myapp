@@ -1,22 +1,17 @@
 window.onload = function()
 {
-    var myDataRef = new Firebase('https://myapp-73570.firebaseio.com/');
-    myDataRef.on('child_added', function(snapshot) {
-      var post = snapshot.val();
-      displayUserPost(post.name, post.text);
-    });
 
-    function submitPost(e){
-      var myDataRef = new Firebase('https://myapp-73570.firebaseio.com/');
-      var name = $('#titleInput').val();
-      var text = $('#postInput').val();
-      myDataRef.push({name: name, text: text});
-      $('#postInput').val('');
-      e.preventDefault();
-    };
+    var config = {
+        apiKey: "AIzaSyDd5OMMFN4sQ5W3JhSVLWHKSdMR0KN72hQ",
+        authDomain: "myapp-73570.firebaseapp.com",
+        databaseURL: "https://myapp-73570.firebaseio.com",
+        storageBucket: "myapp-73570.appspot.com",
+        messagingSenderId: "182292378404"
+      };
+    firebase.initializeApp(config);
 
-    function displayUserPost(name, text) {
-      $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#PostsDiv'));
-      $('#PostsDiv')[0].scrollTop = $('#PostsDiv')[0].scrollHeight;
-    }
+    // function displayUserPost(name, text) {
+    //   $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#PostsDiv'));
+    //   $('#PostsDiv')[0].scrollTop = $('#PostsDiv')[0].scrollHeight;
+    // }
 }

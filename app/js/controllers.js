@@ -40,13 +40,22 @@ function($scope, $rootScope, $http, $location){
 	});
 }]);
 
-myApp.controller('Y1600Ctrl',['$scope', '$rootScope', '$http', '$location', '$firebaseArray', 
- function($scope, $rootScope, $http, $location, $firebaseArray){
-//	$rootScope.params.path = 'http://www.chayka-ring.com/upload/file/Koltco_2016/10_valeriy_shevelev.jpg';
-	var ref = new Firebase("https://myapp-73570.firebaseio.com/");
-	$scope.myData = $firebaseArray(ref);
-	console.log($scope.myData)
+myApp.controller('Y1600Ctrl',['$scope', '$rootScope', '$http', '$location', '$firebaseObject', 
+ function($scope, $rootScope, $http, $location, $firebaseObject){
+	var database = firebase.database();
+	$scope.data = {pilots: []};
+	$scope.newRecord = {pilotPlace: '', name: '', lastName: '', car: '', time: '', penalization: '', points:''};
+	
+	var myDataRef = new Firebase('https://myapp-73570.firebaseio.com/');
+	myDataRef.on('child_added', function(snapshot) {
 
+		$scope.data.pilots.push(snapshot.val());
+    });
+
+	$scope.addRecord = function(){
+      myDataRef.push($scope.newRecord);
+
+	}
 }]);
 
 myApp.controller('GccupCtrl',['$scope', '$rootScope', '$http', '$location',

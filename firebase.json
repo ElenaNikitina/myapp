@@ -1,0 +1,11 @@
+{
+  "database": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  },
+  "hosting": {
+    "public": "app",
+        "rewrites": [
+    ]
+  }
+}
